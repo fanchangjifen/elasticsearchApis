@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>gilbert-api-elasticsearch</name>
-	<description>Demo project for Spring Boot</description>
+	<description>elasticsearch 5.6.8 clients </description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -22,6 +22,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<fastjson.version>1.2.47</fastjson.version>
+		<commons-lang.version>2.6</commons-lang.version>
+		<elasticsearch.version>5.6.8</elasticsearch.version>
 	</properties>
 
 	<dependencies>
@@ -29,13 +32,66 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
-
+		<dependency> 
+	      <groupId>org.springframework.boot</groupId> 
+	      <artifactId>spring-boot-starter-web</artifactId> 
+	    </dependency>
+		<dependency>
+	    	<groupId>commons-lang</groupId>
+	    	<artifactId>commons-lang</artifactId>
+	    	<version>${commons-lang.version}</version>
+		</dependency>
+		<dependency>
+	    	<groupId>com.alibaba</groupId>
+	    	<artifactId>fastjson</artifactId>
+	    	<version>${fastjson.version}</version>
+		</dependency>
+		<dependency>
+	        <groupId>org.elasticsearch.client</groupId>
+	        <artifactId>x-pack-transport</artifactId>
+	        <version>${elasticsearch.version}</version>
+	    </dependency>
+	    <dependency>
+	    	<groupId>org.elasticsearch.client</groupId>
+	    	<artifactId>elasticsearch-rest-high-level-client</artifactId>
+	    	<version>${elasticsearch.version}</version>
+		</dependency>
+		<dependency>
+		  <groupId>net.logstash.logback</groupId>
+		  <artifactId>logstash-logback-encoder</artifactId>
+		  <version>5.1</version>
+		  <exclusions>
+		  	<exclusion>
+		  		<groupId>ch.qos.logback</groupId>
+	    			<artifactId>logback-core</artifactId>
+		  	</exclusion>
+		  	<exclusion>
+		  		<groupId>ch.qos.logback</groupId>
+	    			<artifactId>logback-classic</artifactId>
+		  	</exclusion>
+		  </exclusions>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	
+	<repositories>
+     <!-- add the elasticsearch repo -->
+      <repository>
+         <id>elasticsearch-releases</id>
+         <url>https://artifacts.elastic.co/maven</url>
+         <releases>
+          <enabled>true</enabled>
+         </releases>
+         <snapshots>
+            <enabled>false</enabled>
+         </snapshots>
+      </repository>
+   </repositories>
 
 	<build>
 		<plugins>

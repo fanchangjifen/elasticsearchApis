@@ -5,6 +5,11 @@ spring:
     location: classpath:config/
   application:
     name: gilbert-api-elasticsearch
+  elasticsearch:  
+    cluster-name: dev-application
+    cluster-nodes: 10.110.10.27:9300
+    username: elastic        
+    password: changeme
     
 server: 
-  port: 9002
+  port: 8080
