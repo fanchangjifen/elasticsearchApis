@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: prod
+  config:
+    location: classpath:config/
+  application:
+    name: gilbert-api-elasticsearch
+    
+server: 
+  port: 9002
