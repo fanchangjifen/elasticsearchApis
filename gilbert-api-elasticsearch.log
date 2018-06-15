@@ -30,3 +30,16 @@ java.lang.NoSuchMethodError: org.springframework.boot.builder.SpringApplicationB
 17:14:30.311 [main] INFO  i.n.util.internal.PlatformDependent - Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system instability. 
 17:14:52.853 [main] INFO  c.g.e.conf.ElasticsearchConfig - Init elasticsearch cluster dev-application start ... 
 17:14:53.411 [main] INFO  c.g.e.GilbertApiElasticsearchApplication - Started GilbertApiElasticsearchApplication in 29.047 seconds (JVM running for 30.081) 
+04:22:32.381 [main] INFO  c.g.e.GilbertApiElasticsearchApplicationTests - Starting GilbertApiElasticsearchApplicationTests on localhost.localdomain with PID 29736 (started by jenkins in /var/lib/jenkins/workspace/panzhen-job) 
+04:22:32.383 [main] INFO  c.g.e.GilbertApiElasticsearchApplicationTests - The following profiles are active: prod 
+04:22:34.445 [main] INFO  o.e.plugins.PluginsService - no modules loaded 
+04:22:34.448 [main] INFO  o.e.plugins.PluginsService - loaded plugin [org.elasticsearch.index.reindex.ReindexPlugin] 
+04:22:34.448 [main] INFO  o.e.plugins.PluginsService - loaded plugin [org.elasticsearch.join.ParentJoinPlugin] 
+04:22:34.449 [main] INFO  o.e.plugins.PluginsService - loaded plugin [org.elasticsearch.percolator.PercolatorPlugin] 
+04:22:34.449 [main] INFO  o.e.plugins.PluginsService - loaded plugin [org.elasticsearch.script.mustache.MustachePlugin] 
+04:22:34.449 [main] INFO  o.e.plugins.PluginsService - loaded plugin [org.elasticsearch.transport.Netty3Plugin] 
+04:22:34.449 [main] INFO  o.e.plugins.PluginsService - loaded plugin [org.elasticsearch.transport.Netty4Plugin] 
+04:22:34.449 [main] INFO  o.e.plugins.PluginsService - loaded plugin [org.elasticsearch.xpack.XPackPlugin] 
+04:22:35.784 [main] INFO  i.n.util.internal.PlatformDependent - Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system instability. 
+04:22:36.062 [main] INFO  c.g.e.conf.ElasticsearchConfig - Init elasticsearch cluster dev-application start ... 
+04:22:37.227 [main] INFO  c.g.e.GilbertApiElasticsearchApplicationTests - Started GilbertApiElasticsearchApplicationTests in 5.247 seconds (JVM running for 6.41) 
